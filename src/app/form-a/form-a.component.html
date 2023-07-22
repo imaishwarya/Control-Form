@@ -1,0 +1,47 @@
+<div class="container">
+    <h3><u>Form using Dropdown</u></h3>
+    <div class="row">
+        <form class="center">
+            <div class="row">
+                <div class="col-6 first">
+                    <label for="firstname" class="left">First Name</label><br>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your Firstname" class="form-control">
+                </div><br>
+                <div class="col-6 last">
+                    <label for="lastname" class="right">Last Name</label><br>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your Lastname" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div><br>
+    <div class="row">
+        <div class="col-6">
+            <div>
+                <label for="selectOption" class="left">How Should We Contact You?</label>
+            </div>
+             <select name="selectOption" id="selectOption" [(ngModel)]="Option" >
+                <option value="">Choose Option</option>
+                <option value="phoneNumber">Phone Address</option>
+                <option value="email">Email Address</option>
+            </select>
+        </div><br>
+        <div class="col-6">
+            <div *ngIf="Option === 'phoneNumber'">
+                <label for="phoneNumber">Phone Address</label><br>
+                <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber" class="form-control">
+            </div>
+            <div *ngIf="Option === 'email'">
+                <label class="left" for="emailAddress">Email Address</label><br>
+                <input type="text" id="email" name="email" [(ngModel)]="emailId" class="form-control">
+            </div>
+        </div><br>
+        <button>Submit</button>
+    </div>
+</div><br>
+
+
+
+
+
+
+

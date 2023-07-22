@@ -1,0 +1,48 @@
+<div class="container">
+    <h3><u>Form using Radio Button</u></h3>
+    <div class="row">
+        <form class="center">
+            <div class="row">
+                <div class="col-6">
+                    <label for="firstname" class="left">First Name</label><br>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your Firstname" class="form-control">
+                </div><br>
+                <div class="col-6">
+                    <label for="lastname" class="right">Last Name</label><br>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your Lastname" class="form-control">
+                </div>
+            </div><br>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div>
+                <label for="selectOption" class="left">How Should We Contact You?</label>
+            </div>
+            <label>
+                <input type="radio" name="contactOption" value="phone" [(ngModel)]="Option">Phone
+            </label>
+            <label>
+                <input type="radio" name="contactOption" value="email" [(ngModel)]="Option">Email
+            </label>
+        </div><br>
+        <div class="col-6">
+            <div *ngIf="Option === 'phone'">
+                <label>Phone Number</label><br>
+                <input type="text" name="phoneNumber" class="form-control">
+            </div>
+            <div *ngIf="Option === 'email'">
+                <label>Email Address</label><br>
+                <input type="text" name="email" class="form-control">
+            </div>
+        </div><br>
+        <button>Submit</button>
+    </div>
+</div>
+
+
+
+
+
+
+
