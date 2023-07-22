@@ -18,7 +18,7 @@ export class FormAComponent {
     this.myControlForm = new FormGroup({
       selectedOption: new FormControl('')
     });
-    console.log('test 2113')
+    console.log('test 2113 new test')
   }
 
   onOPtionChange(){
